@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- favicon -->
+  <link href="https://upload.wikimedia.org/wikipedia/commons/2/25/Red.svg" rel="shortcut icon">
+  <!-- icons -->
+  <script src="https://kit.fontawesome.com/481f0a2398.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch&display=swap" rel="stylesheet">
+  <!-- styles -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Etch A Sketch</title>
+</head>
+<body>
+  <main>
+    <div class="container">
+      <div class="title">
+        <h1>Etch-A-Sketch</h1>
+      </div>
+      <div class="grid-screen"></div>
+      <div class="knob-container" id="left">
+        <button class="knob grid-size">Grid Size</button>
+        <div class=size-container>
+          <label class="enter">Enter<br>Number</label>
+          <input class="input-size" type="number">
+          <button class="submit-size">Submit</button>
+        </div>
+      </div>
+      <div class="buttons">
+        <button class="brush black">Black</button>
+        <button class="brush rainbow">
+          <!-- comments remove the whitespace -->
+          <span style="color: red">R</span><!--
+          --><span style="color: orange">a</span><!--
+          --><span style="color: gold">i</span><!--
+          --><span style="color: green">n</span><!--
+          --><span style="color: cyan">b</span><!--
+          --><span style="color: blue">o</span><!--
+          --><span style="color: purple">w</span>
+        </button>
+        <button class="brush eraser">Eraser</button>
+      </div>
+      <div class="knob-container" id="right">
+        <button class="knob reset">Reset</button>
+      </div>
+    </div>
+    <a class="odin-container" href="https://www.theodinproject.com/courses/web-development-101/lessons/etch-a-sketch-project" target="_blank">
+      <img class="odin-logo" src="https://www.theodinproject.com/assets/odin-logo-94557650fea28e24cc04263ece9c08ab5956e0d344faa4d03cdb732e9f9983d4.svg" alt="The Odin Project Logo">
+    </a>
+  </main>
+  
+  <script src="js/script.js"></script>
+</body>
+</html>

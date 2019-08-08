@@ -1,0 +1,227 @@
+:root {
+  --primary-color: #fafafa;
+  --secondary-color: #3d3d3d;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Cabin Sketch', cursive;
+  line-height: 1.6;
+  color: var(--secondary-color);
+  font-size: 1.1rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.3;
+}
+
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+main {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: url('../img/wood-texture.jpg') center;
+  background-size: auto 100%;
+}
+
+.container {
+  display: grid;
+  width: 85vh;
+  height: 85vh;
+  grid-template-columns: 1fr 64vh 1fr;
+  grid-template-rows: 1fr 64vh 1fr;
+  grid-template-areas: 
+    ".          title       ."
+    ".          grid-screen ."
+    "knob-left  buttons     knob-right";
+  background: radial-gradient(circle, #f00 50%, #cf0000 100%);
+  border: 2px solid #bf0000;
+  box-shadow: 0 0 16px 5px rgba(0, 0, 0, .5);
+  border-radius: 5px;
+}
+
+.title {
+  grid-area: title;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: #fff;
+  font-size: 6vh;
+}
+
+.knob-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#left {
+  grid-area: knob-left;
+}
+
+#right {
+  grid-area: knob-right;
+}
+
+.knob {
+  display: flex;
+  width: 9vh;
+  height: 9vh;
+  background: #efefef;
+  border-radius: 50%;
+  box-shadow: 0 0 8px 2px rgba(0, 0, 0, .2);
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: 2.5vh;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.buttons {
+  grid-area: buttons;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.brush {
+  width: 12vh;
+  height: 5vh;
+  background: #efefef;
+  border-radius: 5vh;
+  box-shadow: 0 0 8px 2px rgba(0, 0, 0, .2);
+  font-family: inherit;
+  font-size: 2.5vh;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.knob:hover, .brush:hover {
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, .3);
+}
+
+.knob:active, .brush:active {
+  background: #e0e0e0;
+}
+
+.black {
+  border: 0.25vh solid black;
+}
+
+.eraser {
+  color: #e55e7e;
+}
+
+.grid-screen {
+  grid-area: grid-screen;
+  display: grid;
+  overflow: hidden;
+  width: 64vh;
+  height: 64vh;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(16, 1fr);
+  background: radial-gradient(circle, #fafafa 50%, lightgrey 100%);
+  border: 1px solid #bfbfbf;
+  border-radius: 8px;
+}
+
+.cell:hover {
+  background-color: #000;
+}
+
+.size-container {
+  position: absolute;
+  z-index: 10;
+  display: none;
+  flex-direction: column;
+  width: 9vh;
+  height: 9vh;
+  background: #e0e0e0;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.enter {
+  line-height: 1.2vh;
+  padding: 0 0 .5vh 0;
+  font-size: 1.2vh;
+  text-align: center;
+  font-family: system-ui;
+}
+
+.input-size {
+  width: 5vh;
+  height: 2.3vh;
+  font-size: 1.2vh;
+  text-align: center;
+}
+
+.submit-size {
+  width: 5vh;
+  height: 2vh;
+  font-size: 1.2vh;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.odin-container {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  display: flex;
+  width: 75px;
+  height: 75px;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 15px 2px rgba(0, 0, 0, .2);
+}
+
+.odin-container:hover {
+  box-shadow: 0 0 15px 6px rgba(0, 0, 0, .2);
+}
+
+.odin-logo {
+  width: 50%;
+}
+
+@media (max-width: 900px) {
+
+  .odin-container {
+    display: none;
+  }
+}
